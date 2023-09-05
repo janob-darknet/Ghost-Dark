@@ -19,7 +19,7 @@ if janob_darknet=="2":
 	byte = file.read()
 	file.close()
 	print("\033[1;31mshifrdan chiqarildi")
-	decodeit = open(code.image_name, 'wb')
+	decodeit = open(input("image name: "), 'wb')
 	decodeit.write(base64.b64decode((byte)))
 	decodeit.close()
 	
@@ -32,7 +32,7 @@ elif janob_darknet == "1":
 		converted_string = base64.b64encode(image2string.read())
 		print("\033[1;31mshifrlandi")
 			  
-	with open(code.txt_name, "wb") as file:
+	with open(input("txt name: "), "wb") as file:
 	    file.write(converted_string)
 	    
 # delete
